@@ -1,0 +1,11 @@
+C:\Users\EXTERMINATOR\Desktop\ATM assignment\ATMProject\bin\Debug\ATMProject.exe.config
+C:\Users\EXTERMINATOR\Desktop\ATM assignment\ATMProject\bin\Debug\ATMProject.exe
+C:\Users\EXTERMINATOR\Desktop\ATM assignment\ATMProject\bin\Debug\ATMProject.pdb
+C:\Users\EXTERMINATOR\Desktop\ATM assignment\ATMProject\obj\Debug\ATMProject.csprojAssemblyReference.cache
+C:\Users\EXTERMINATOR\Desktop\ATM assignment\ATMProject\obj\Debug\ATMProject.LoginScreen.resources
+C:\Users\EXTERMINATOR\Desktop\ATM assignment\ATMProject\obj\Debug\ATMProject.MainScreen.resources
+C:\Users\EXTERMINATOR\Desktop\ATM assignment\ATMProject\obj\Debug\ATMProject.Properties.Resources.resources
+C:\Users\EXTERMINATOR\Desktop\ATM assignment\ATMProject\obj\Debug\ATMProject.csproj.GenerateResource.cache
+C:\Users\EXTERMINATOR\Desktop\ATM assignment\ATMProject\obj\Debug\ATMProject.csproj.CoreCompileInputs.cache
+C:\Users\EXTERMINATOR\Desktop\ATM assignment\ATMProject\obj\Debug\ATMProject.exe
+C:\Users\EXTERMINATOR\Desktop\ATM assignment\ATMProject\obj\Debug\ATMProject.pdb

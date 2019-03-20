@@ -23,33 +23,18 @@ namespace ATMProject
         public ATM(Account[] ac)
         {
             this.ac = ac;
-            Console.WriteLine("hello from ATM");
+            //Console.WriteLine("hello from ATM");
 
         }
-
-        /*
-         *    this method promts for the input of an account number
-         *    the string input is then converted to an int
-         *    a for loop is used to check the enterd account number
-         *    against those held in the account array
-         *    if a match is found a referance to the match is returned
-         *    if the for loop completest with no match we return null
-         * 
-         */
-        public Account findAccount()
+        public Account getActiveAccount()
         {
-            int input = Convert.ToInt32(Console.ReadLine());
-
-            for (int i = 0; i < this.ac.Length; i++)
-            {
-                if (ac[i].getAccountNum() == input)
-                {
-                    return ac[i];
-                }
-            }
-
-            return null;
+            return activeAccount;
         }
+        public void setActiveAccount(Account thisAccount)
+        {
+            activeAccount = thisAccount;
+        }
+        
     }
 }
 

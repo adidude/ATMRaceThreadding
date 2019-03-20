@@ -26,6 +26,24 @@ namespace ATMProject
         {
             return atm;
         }
+        /*
+         Will test to see if the details are correct for the relevant account.
+             */
+        public Boolean isLoginSuccessful(int accNo, int pin)
+        {
+            //For the number of accounts in the bank.
+            for (int i = 0; i < ac.Length; i++)
+            {
+                this.GetATM().setActiveAccount(ac[i]);
+                //If the current account is the one being searched for.
+                if (ac[i].getAccountNum() == accNo)
+                {
+                    //Checks if the pin is correct and returns the value.
+                    return ac[i].checkPin(pin);
+                }
+            }
+            return false;
+        }
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

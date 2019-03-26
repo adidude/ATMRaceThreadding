@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace ATMProject
@@ -13,9 +14,18 @@ namespace ATMProject
     public partial class MainScreenLogin : Form
     {
         Program thisProgram = new Program();
+        private static System.Timers.Timer timer = new System.Timers.Timer();
         public MainScreenLogin()
         {
             InitializeComponent();
+
+            accountNumberLbl.Visible = false;
+            accountNumberTxtbox.Visible = false;
+            pinNumberTxtbox.Visible = false;
+            pinNumberLbl.Visible = false;
+            mainLbl.Visible = false;
+            submitBtn.Visible = false;
+            gifRenderer.Visible = false;
         }
         private void submitBtn_Click(object sender, EventArgs e)
         {
@@ -49,6 +59,42 @@ namespace ATMProject
             }
         }
 
+        private void InsertCardBtn_Click(object sender, EventArgs e)
+        {
+            InsertCardBtn.Visible = false;
+            gifRenderer.Visible = true;
+            SetTimer(1960);
+            while (gifRenderer.Visible)
+            {
+                gifRenderer.Refresh();
+                if (!timer.Enabled)
+                {
+                    accountNumberLbl.Visible = true;
+                    accountNumberTxtbox.Visible = true;
+                    pinNumberTxtbox.Visible = true;
+                    pinNumberLbl.Visible = true;
+                    mainLbl.Visible = true;
+                    submitBtn.Visible = true;
+                    gifRenderer.Visible = false;
+                }
+            }
+        }
+        private void SetTimer(int time)
+
+        {
+            timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+
+            timer.Interval = time;
+
+            timer.Enabled = true;
+
+        }
+
+        private void OnTimedEvent(Object source, ElapsedEventArgs e)
+
+        {
+            timer.Enabled = false;
+        }
     }
 }
 

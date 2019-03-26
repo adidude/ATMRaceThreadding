@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreenLogin));
             this.mainLbl = new System.Windows.Forms.Label();
             this.pinNumberLbl = new System.Windows.Forms.Label();
             this.accountNumberLbl = new System.Windows.Forms.Label();
             this.submitBtn = new System.Windows.Forms.Button();
             this.pinNumberTxtbox = new System.Windows.Forms.TextBox();
             this.accountNumberTxtbox = new System.Windows.Forms.TextBox();
+            this.InsertCardBtn = new System.Windows.Forms.Button();
+            this.gifRenderer = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gifRenderer)).BeginInit();
             this.SuspendLayout();
             // 
             // mainLbl
@@ -89,11 +93,32 @@
             this.accountNumberTxtbox.Size = new System.Drawing.Size(153, 20);
             this.accountNumberTxtbox.TabIndex = 19;
             // 
+            // InsertCardBtn
+            // 
+            this.InsertCardBtn.Location = new System.Drawing.Point(316, 200);
+            this.InsertCardBtn.Name = "InsertCardBtn";
+            this.InsertCardBtn.Size = new System.Drawing.Size(164, 61);
+            this.InsertCardBtn.TabIndex = 25;
+            this.InsertCardBtn.Text = "Insert Card";
+            this.InsertCardBtn.UseVisualStyleBackColor = true;
+            this.InsertCardBtn.Click += new System.EventHandler(this.InsertCardBtn_Click);
+            // 
+            // gifRenderer
+            // 
+            this.gifRenderer.Image = ((System.Drawing.Image)(resources.GetObject("gifRenderer.Image")));
+            this.gifRenderer.Location = new System.Drawing.Point(1, 0);
+            this.gifRenderer.Name = "gifRenderer";
+            this.gifRenderer.Size = new System.Drawing.Size(799, 450);
+            this.gifRenderer.TabIndex = 26;
+            this.gifRenderer.TabStop = false;
+            // 
             // MainScreenLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.InsertCardBtn);
+            this.Controls.Add(this.gifRenderer);
             this.Controls.Add(this.pinNumberLbl);
             this.Controls.Add(this.accountNumberLbl);
             this.Controls.Add(this.submitBtn);
@@ -102,6 +127,7 @@
             this.Controls.Add(this.mainLbl);
             this.Name = "MainScreenLogin";
             this.Text = "ATM Main Screen";
+            ((System.ComponentModel.ISupportInitialize)(this.gifRenderer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,5 +141,7 @@
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.TextBox pinNumberTxtbox;
         private System.Windows.Forms.TextBox accountNumberTxtbox;
+        private System.Windows.Forms.Button InsertCardBtn;
+        private System.Windows.Forms.PictureBox gifRenderer;
     }
 }

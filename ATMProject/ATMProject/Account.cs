@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ATMProject
 {
-    class Account
+    public class Account
     {
         //the attributes for the account
         private int balance;

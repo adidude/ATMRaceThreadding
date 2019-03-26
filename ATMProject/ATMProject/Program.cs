@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace ATMProject
 {
-    class Program
+    public class Program
     {
         private Account[] ac = new Account[3];
         private ATM atm;
@@ -44,6 +44,7 @@ namespace ATMProject
             }
             return false;
         }
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -52,7 +53,7 @@ namespace ATMProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainScreen());
+            Application.Run(new MainScreenLogin());
         }
 
 

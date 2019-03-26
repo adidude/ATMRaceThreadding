@@ -5,13 +5,18 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace ATMProject
 {
     public partial class MainScreen : Form
     {
+
+        private static System.Timers.Timer timer = new System.Timers.Timer();
+
         Program thisProgram = new Program();
         public MainScreen()
         {
@@ -37,6 +42,13 @@ namespace ATMProject
             customBtn_2.Visible = false;
             btnBack.Visible = false;
             btnBack_2.Visible = false;
+            accountNumberLbl.Visible = false;
+            accountNumberTxtbox.Visible = false;
+            pinNumberTxtbox.Visible = false;
+            pinNumberLbl.Visible = false;
+            mainLbl.Visible = false;
+            submitBtn.Visible = false;
+            gifRenderer.Visible = false;
         }
         private void submitBtn_Click(object sender, EventArgs e)
         {
@@ -214,7 +226,48 @@ namespace ATMProject
             MessageBox.Show("Your balance is £" + thisProgram.GetATM().getActiveAccount().getBalance(), "Account Balance");
         }
 
-        
+        private void InsertCardBtn_Click(object sender, EventArgs e)
+        {
+            InsertCardBtn.Visible = false;
+            gifRenderer.Visible = true;
+            SetTimer(1960);
+            while(gifRenderer.Visible)
+            {
+                gifRenderer.Refresh();
+                if(!timer.Enabled)
+                {
+                    accountNumberLbl.Visible = true;
+                    accountNumberTxtbox.Visible = true;
+                    pinNumberTxtbox.Visible = true;
+                    pinNumberLbl.Visible = true;
+                    mainLbl.Visible = true;
+                    submitBtn.Visible = true;
+                    gifRenderer.Visible = false;
+                }
+            }
+        }
+
+        private void SetTimer(int time)
+
+        {
+            timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+
+            timer.Interval = time;
+
+            timer.Enabled = true;
+
+        }
+
+        private void OnTimedEvent(Object source, ElapsedEventArgs e)
+
+        {
+            timer.Enabled = false;
+        }
+
+        private void gifRenderer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
         
 

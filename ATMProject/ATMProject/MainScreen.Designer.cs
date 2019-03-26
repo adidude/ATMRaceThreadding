@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.mainLbl = new System.Windows.Forms.Label();
             this.accountBalanceBtn = new System.Windows.Forms.Button();
             this.withdrawATMBtn = new System.Windows.Forms.Button();
@@ -54,6 +56,10 @@
             this.btn10_2 = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnBack_2 = new System.Windows.Forms.Button();
+            this.gifRenderer = new System.Windows.Forms.PictureBox();
+            this.InsertCardBtn = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.gifRenderer)).BeginInit();
             this.SuspendLayout();
             // 
             // mainLbl
@@ -104,6 +110,7 @@
             this.pinNumberLbl.Size = new System.Drawing.Size(68, 13);
             this.pinNumberLbl.TabIndex = 23;
             this.pinNumberLbl.Text = "PIN Number:";
+            this.pinNumberLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // accountNumberLbl
             // 
@@ -307,11 +314,39 @@
             this.btnBack_2.UseVisualStyleBackColor = true;
             this.btnBack_2.Click += new System.EventHandler(this.btnBack_2_Click);
             // 
+            // gifRenderer
+            // 
+            this.gifRenderer.Image = ((System.Drawing.Image)(resources.GetObject("gifRenderer.Image")));
+            this.gifRenderer.Location = new System.Drawing.Point(-1, 1);
+            this.gifRenderer.Name = "gifRenderer";
+            this.gifRenderer.Size = new System.Drawing.Size(800, 447);
+            this.gifRenderer.TabIndex = 41;
+            this.gifRenderer.TabStop = false;
+            this.gifRenderer.Click += new System.EventHandler(this.gifRenderer_Click);
+            // 
+            // InsertCardBtn
+            // 
+            this.InsertCardBtn.Location = new System.Drawing.Point(294, 278);
+            this.InsertCardBtn.Name = "InsertCardBtn";
+            this.InsertCardBtn.Size = new System.Drawing.Size(184, 73);
+            this.InsertCardBtn.TabIndex = 42;
+            this.InsertCardBtn.Text = "Insert Card";
+            this.InsertCardBtn.UseVisualStyleBackColor = true;
+            this.InsertCardBtn.Click += new System.EventHandler(this.InsertCardBtn_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.InsertCardBtn);
+            this.Controls.Add(this.gifRenderer);
             this.Controls.Add(this.btnBack_2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.customBtn_2);
@@ -340,6 +375,7 @@
             this.Controls.Add(this.withdrawATMBtn);
             this.Name = "MainScreen";
             this.Text = "ATM Main Screen";
+            ((System.ComponentModel.ISupportInitialize)(this.gifRenderer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,5 +409,8 @@
         private System.Windows.Forms.Button btn10_2;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnBack_2;
+        private System.Windows.Forms.PictureBox gifRenderer;
+        private System.Windows.Forms.Button InsertCardBtn;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

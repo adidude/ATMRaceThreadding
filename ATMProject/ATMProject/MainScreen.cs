@@ -40,16 +40,23 @@ namespace ATMProject
         }
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            if (thisProgram.isLoginSuccessful(Int32.Parse(accountNumberTxtbox.Text), Int32.Parse(pinNumberTxtbox.Text)))
+            try
             {
-                //TODO:Implement Success Condition
-                updateForm();
-            }
-            else
-            {
-                //TODO:Implement Failure Condition
-                MessageBox.Show("Please enter the correct account number or PIN", "Login Failed!", MessageBoxButtons.OK);
+                if (thisProgram.isLoginSuccessful(Int32.Parse(accountNumberTxtbox.Text), Int32.Parse(pinNumberTxtbox.Text)))
+                {
+                    //TODO:Implement Success Condition
+                    updateForm();
+                }
+                else
+                {
+                    //TODO:Implement Failure Condition
+                    MessageBox.Show("Please enter the correct account number or PIN", "Login Failed!", MessageBoxButtons.OK);
 
+                }
+            }
+            catch(System.FormatException o)
+            {
+                MessageBox.Show("Please enter the correct account number or PIN", "Login Failed!", MessageBoxButtons.OK);
             }
         }
         private void btnExit_Click(object sender, EventArgs e)

@@ -124,7 +124,7 @@ namespace ATMProject
             btnBack.Visible = false;
         }
     }
-    //via https://stackoverflow.com/questions/5427020/prompt-dialog-in-windows-forms
+    //Prompt via https://stackoverflow.com/questions/5427020/prompt-dialog-in-windows-forms
     public class Prompt
     {
         public string ShowDialog(string text, string caption)

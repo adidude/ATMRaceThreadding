@@ -19,9 +19,11 @@ namespace ATMProject
         }
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            if (thisProgram.isLoginSuccessful(Int32.Parse(accountNumberTxtbox.Text), Int32.Parse(pinNumberTxtbox.Text)))
+            //Account current = thisProgram.GetATM().getActiveAccount();
+            if (thisProgram.isLoginSuccessful(Int32.Parse(accountNumberTxtbox.Text), Int32.Parse(pinNumberTxtbox.Text)) && thisProgram.GetATM().getActiveAccount().getBlocked() != true)
             {
                 //TODO:Implement Success Condition
+                thisProgram.GetATM().getActiveAccount().setAttemptsLeft(3);
                 new MainScreenATM(thisProgram.GetATM().getActiveAccount()).Show();
                 new MainScreenATM(thisProgram.GetATM().getActiveAccount()).Show();
                 this.Hide();
@@ -29,7 +31,20 @@ namespace ATMProject
             else
             {
                 //TODO:Implement Failure Condition
-                MessageBox.Show("Please enter the correct account number or PIN", "Login Failed!", MessageBoxButtons.OK);
+                thisProgram.GetATM().getActiveAccount().setAttemptsLeft(thisProgram.GetATM().getActiveAccount().getAttemptsLeft() - 1);
+                if (thisProgram.GetATM().getActiveAccount().getAttemptsLeft() == 0)
+                {
+                    thisProgram.GetATM().getActiveAccount().setBlocked(true);
+                    MessageBox.Show("The card associated with this account has been blocked because of too many failed attempts", "Card Blocked!", MessageBoxButtons.OK);
+                }
+                else if (thisProgram.GetATM().getActiveAccount().getBlocked() == true)
+                {
+                    MessageBox.Show("This card was previously blocked due to successive incorrect PIN entries", "Contact your bank branch!", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Please enter the correct account number or PIN. Your account will be blocked after enough failed attempts", "Login Failed!", MessageBoxButtons.OK);
+                }
 
             }
         }

@@ -13,9 +13,9 @@ namespace ATMProject
 
         public Program()
         {
-            ac[0] = new Account(300, 1111, 111111);
-            ac[1] = new Account(750, 2222, 222222);
-            ac[2] = new Account(3000, 3333, 333333);
+            ac[0] = new Account(300, 1111, 111111, false, 3);
+            ac[1] = new Account(750, 2222, 222222, false, 3);
+            ac[2] = new Account(3000, 3333, 333333, false, 3);
             atm = new ATM(ac);
         }
         public Account[] GetAccounts()

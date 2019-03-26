@@ -1,30 +1,22 @@
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.csprojAssemblyReference.cache
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.MainScreen.resources
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.Properties.Resources.resources
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.csproj.GenerateResource.cache
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.csproj.CoreCompileInputs.cache
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\bin\Debug\ATMProject.exe.config
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\bin\Debug\ATMProject.exe
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\bin\Debug\ATMProject.pdb
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.exe
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.pdb
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\ATMProject\bin\Debug\ATMProject.exe.config
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\ATMProject\bin\Debug\ATMProject.exe
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\ATMProject\bin\Debug\ATMProject.pdb
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\ATMProject\obj\Debug\ATMProject.csprojAssemblyReference.cache
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\ATMProject\obj\Debug\ATMProject.MainScreen.resources
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\ATMProject\obj\Debug\ATMProject.Properties.Resources.resources
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\ATMProject\obj\Debug\ATMProject.csproj.GenerateResource.cache
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\ATMProject\obj\Debug\ATMProject.csproj.CoreCompileInputs.cache
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\ATMProject\obj\Debug\ATMProject.exe
-C:\Users\danielscheitler\source\repos\ATMProject\ATMProject\ATMProject\obj\Debug\ATMProject.pdb
-C:\Users\DAN\source\repos\ATMProject\ATMProject\bin\Debug\ATMProject.exe.config
-C:\Users\DAN\source\repos\ATMProject\ATMProject\bin\Debug\ATMProject.exe
-C:\Users\DAN\source\repos\ATMProject\ATMProject\bin\Debug\ATMProject.pdb
-C:\Users\DAN\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.csprojAssemblyReference.cache
-C:\Users\DAN\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.MainScreen.resources
-C:\Users\DAN\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.Properties.Resources.resources
-C:\Users\DAN\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.csproj.GenerateResource.cache
-C:\Users\DAN\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.csproj.CoreCompileInputs.cache
-C:\Users\DAN\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.exe
-C:\Users\DAN\source\repos\ATMProject\ATMProject\obj\Debug\ATMProject.pdb
+C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\bin\Debug\ATMProject.exe.config
+C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\bin\Debug\ATMProject.exe
+C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\bin\Debug\ATMProject.pdb
+C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debug\ATMProject.csprojAssemblyReference.cache
+C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debug\ATMProject.LoginScreen.resources
+C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debug\ATMProject.MainScreen.resources
+C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debug\ATMProject.Properties.Resources.resources
+C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debug\ATMProject.csproj.GenerateResource.cache
+C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debug\ATMProject.csproj.CoreCompileInputs.cache
+C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debug\ATMProject.exe
+C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debug\ATMProject.pdb
+C:\Users\chris\Documents\Github stuff\ATMProject\ATMProject\bin\Debug\ATMProject.exe.config
+C:\Users\chris\Documents\Github stuff\ATMProject\ATMProject\bin\Debug\ATMProject.exe
+C:\Users\chris\Documents\Github stuff\ATMProject\ATMProject\bin\Debug\ATMProject.pdb
+C:\Users\chris\Documents\Github stuff\ATMProject\ATMProject\obj\Debug\ATMProject.csprojAssemblyReference.cache
+C:\Users\chris\Documents\Github stuff\ATMProject\ATMProject\obj\Debug\ATMProject.LoginScreen.resources
+C:\Users\chris\Documents\Github stuff\ATMProject\ATMProject\obj\Debug\ATMProject.MainScreen.resources
+C:\Users\chris\Documents\Github stuff\ATMProject\ATMProject\obj\Debug\ATMProject.Properties.Resources.resources
+C:\Users\chris\Documents\Github stuff\ATMProject\ATMProject\obj\Debug\ATMProject.csproj.GenerateResource.cache
+C:\Users\chris\Documents\Github stuff\ATMProject\ATMProject\obj\Debug\ATMProject.csproj.CoreCompileInputs.cache
+C:\Users\chris\Documents\Github stuff\ATMProject\ATMProject\obj\Debug\ATMProject.exe
+C:\Users\chris\Documents\Github stuff\ATMProject\ATMProject\obj\Debug\ATMProject.pdb

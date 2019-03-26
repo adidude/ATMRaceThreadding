@@ -23,7 +23,6 @@ namespace ATMProject
             {
                 //TODO:Implement Success Condition
                 new MainScreenATM(thisProgram.GetATM().getActiveAccount()).Show();
-                new MainScreenATM(thisProgram.GetATM().getActiveAccount()).Show();
                 this.Hide();
             }
             else

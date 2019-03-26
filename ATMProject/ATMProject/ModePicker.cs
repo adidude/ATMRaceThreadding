@@ -30,8 +30,9 @@ namespace ATMProject
 
                 //Application.Run(new MainScreenLogin());
                 this.Hide();
-                MainScreenLogin mainScreenLogin = new MainScreenLogin();
-                mainScreenLogin.Show();
+                Program.startThreading();
+                //MainScreenLogin mainScreenLogin = new MainScreenLogin();
+                //mainScreenLogin.Show();
                 
             }
 

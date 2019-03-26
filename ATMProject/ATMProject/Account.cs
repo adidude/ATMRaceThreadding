@@ -6,19 +6,23 @@ using System.Threading.Tasks;
 
 namespace ATMProject
 {
-    class Account
+    public class Account
     {
         //the attributes for the account
         private int balance;
         private int pin;
         private int accountNum;
+        private bool blocked;
+        private int attemptsLeft;
 
-        // a constructor that takes initial values for each of the attributes (balance, pin, accountNumber)
-        public Account(int balance, int pin, int accountNum)
+        // a constructor that takes initial values for each of the attributes (balance, pin, accountNumber, blocked)
+        public Account(int balance, int pin, int accountNum, bool blocked, int attemptsLeft)
         {
             this.balance = balance;
             this.pin = pin;
             this.accountNum = accountNum;
+            this.blocked = blocked;
+            this.attemptsLeft = attemptsLeft;
         }
         //getter and setter functions for balance
         public int getBalance()
@@ -75,6 +79,21 @@ namespace ATMProject
         {
             return accountNum;
         }
-
+        public bool getBlocked()
+        {
+            return blocked;
+        }
+        public void setBlocked(bool block)
+        {
+            blocked = block;
+        }
+        public int getAttemptsLeft()
+        {
+            return attemptsLeft;
+        }
+        public void setAttemptsLeft(int number)
+        {
+            attemptsLeft = number;
+        }
     }
 }

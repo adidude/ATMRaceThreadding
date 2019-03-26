@@ -11,7 +11,7 @@ namespace ATMProject
          *      
          *      the constutor contains the main funcitonality.
          */
-    class ATM
+    public class ATM
     {
         //local referance to the array of accounts
         private Account[] ac;

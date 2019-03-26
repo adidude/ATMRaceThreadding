@@ -60,6 +60,12 @@
     <Compile Include="MainScreenLogin.Designer.cs">
       <DependentUpon>MainScreenLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModePicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModePicker.Designer.cs">
+      <DependentUpon>ModePicker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainScreenATM.resx">
@@ -67,6 +73,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainScreenLogin.resx">
       <DependentUpon>MainScreenLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModePicker.resx">
+      <DependentUpon>ModePicker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

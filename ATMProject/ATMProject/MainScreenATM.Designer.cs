@@ -45,17 +45,19 @@
             // 
             this.mainLbl.AutoSize = true;
             this.mainLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.mainLbl.Location = new System.Drawing.Point(115, 63);
+            this.mainLbl.Location = new System.Drawing.Point(153, 78);
+            this.mainLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mainLbl.Name = "mainLbl";
-            this.mainLbl.Size = new System.Drawing.Size(597, 46);
+            this.mainLbl.Size = new System.Drawing.Size(747, 58);
             this.mainLbl.TabIndex = 50;
             this.mainLbl.Text = "ATM System - Choose Option(s)";
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(346, 376);
+            this.btnBack.Location = new System.Drawing.Point(461, 463);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(100, 28);
             this.btnBack.TabIndex = 69;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -63,9 +65,10 @@
             // 
             // customBtn
             // 
-            this.customBtn.Location = new System.Drawing.Point(391, 289);
+            this.customBtn.Location = new System.Drawing.Point(521, 356);
+            this.customBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.customBtn.Name = "customBtn";
-            this.customBtn.Size = new System.Drawing.Size(72, 52);
+            this.customBtn.Size = new System.Drawing.Size(96, 64);
             this.customBtn.TabIndex = 68;
             this.customBtn.Text = "Custom amount";
             this.customBtn.UseVisualStyleBackColor = true;
@@ -73,9 +76,10 @@
             // 
             // btn500
             // 
-            this.btn500.Location = new System.Drawing.Point(303, 289);
+            this.btn500.Location = new System.Drawing.Point(404, 356);
+            this.btn500.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn500.Name = "btn500";
-            this.btn500.Size = new System.Drawing.Size(72, 52);
+            this.btn500.Size = new System.Drawing.Size(96, 64);
             this.btn500.TabIndex = 67;
             this.btn500.Text = "£500";
             this.btn500.UseVisualStyleBackColor = true;
@@ -83,9 +87,10 @@
             // 
             // btn100
             // 
-            this.btn100.Location = new System.Drawing.Point(391, 223);
+            this.btn100.Location = new System.Drawing.Point(521, 274);
+            this.btn100.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn100.Name = "btn100";
-            this.btn100.Size = new System.Drawing.Size(72, 52);
+            this.btn100.Size = new System.Drawing.Size(96, 64);
             this.btn100.TabIndex = 66;
             this.btn100.Text = "£100";
             this.btn100.UseVisualStyleBackColor = true;
@@ -93,9 +98,10 @@
             // 
             // btn40
             // 
-            this.btn40.Location = new System.Drawing.Point(303, 223);
+            this.btn40.Location = new System.Drawing.Point(404, 274);
+            this.btn40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn40.Name = "btn40";
-            this.btn40.Size = new System.Drawing.Size(72, 52);
+            this.btn40.Size = new System.Drawing.Size(96, 64);
             this.btn40.TabIndex = 65;
             this.btn40.Text = "£40";
             this.btn40.UseVisualStyleBackColor = true;
@@ -103,9 +109,10 @@
             // 
             // btn20
             // 
-            this.btn20.Location = new System.Drawing.Point(391, 155);
+            this.btn20.Location = new System.Drawing.Point(521, 191);
+            this.btn20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn20.Name = "btn20";
-            this.btn20.Size = new System.Drawing.Size(72, 52);
+            this.btn20.Size = new System.Drawing.Size(96, 64);
             this.btn20.TabIndex = 64;
             this.btn20.Text = "£20";
             this.btn20.UseVisualStyleBackColor = true;
@@ -113,9 +120,10 @@
             // 
             // btn10
             // 
-            this.btn10.Location = new System.Drawing.Point(303, 155);
+            this.btn10.Location = new System.Drawing.Point(404, 191);
+            this.btn10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn10.Name = "btn10";
-            this.btn10.Size = new System.Drawing.Size(72, 52);
+            this.btn10.Size = new System.Drawing.Size(96, 64);
             this.btn10.TabIndex = 63;
             this.btn10.Text = "£10";
             this.btn10.UseVisualStyleBackColor = true;
@@ -123,9 +131,10 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(336, 327);
+            this.btnExit.Location = new System.Drawing.Point(448, 402);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(143, 43);
+            this.btnExit.Size = new System.Drawing.Size(191, 53);
             this.btnExit.TabIndex = 62;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -133,9 +142,10 @@
             // 
             // accountBalanceBtn
             // 
-            this.accountBalanceBtn.Location = new System.Drawing.Point(336, 243);
+            this.accountBalanceBtn.Location = new System.Drawing.Point(448, 299);
+            this.accountBalanceBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.accountBalanceBtn.Name = "accountBalanceBtn";
-            this.accountBalanceBtn.Size = new System.Drawing.Size(143, 51);
+            this.accountBalanceBtn.Size = new System.Drawing.Size(191, 63);
             this.accountBalanceBtn.TabIndex = 61;
             this.accountBalanceBtn.Text = "Check Account Balance ATM";
             this.accountBalanceBtn.UseVisualStyleBackColor = true;
@@ -143,9 +153,10 @@
             // 
             // withdrawATMBtn
             // 
-            this.withdrawATMBtn.Location = new System.Drawing.Point(336, 155);
+            this.withdrawATMBtn.Location = new System.Drawing.Point(448, 191);
+            this.withdrawATMBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.withdrawATMBtn.Name = "withdrawATMBtn";
-            this.withdrawATMBtn.Size = new System.Drawing.Size(143, 52);
+            this.withdrawATMBtn.Size = new System.Drawing.Size(191, 64);
             this.withdrawATMBtn.TabIndex = 60;
             this.withdrawATMBtn.Text = "Withdraw from ATM";
             this.withdrawATMBtn.UseVisualStyleBackColor = true;
@@ -153,9 +164,9 @@
             // 
             // MainScreenATM
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.customBtn);
             this.Controls.Add(this.btn500);
@@ -167,8 +178,10 @@
             this.Controls.Add(this.accountBalanceBtn);
             this.Controls.Add(this.withdrawATMBtn);
             this.Controls.Add(this.mainLbl);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainScreenATM";
             this.Text = "MainScreenATM";
+            this.Load += new System.EventHandler(this.MainScreenATM_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

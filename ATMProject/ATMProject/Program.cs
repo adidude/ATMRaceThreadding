@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace ATMProject
 {
@@ -10,7 +12,8 @@ namespace ATMProject
     {
         private Account[] ac = new Account[3];
         private ATM atm;
-
+        public static bool threadDelay = false;
+        public static ManualResetEvent mre = new ManualResetEvent(false);
         public Program()
         {
             ac[0] = new Account(300, 1111, 111111);
@@ -51,9 +54,12 @@ namespace ATMProject
         [STAThread]
         static void Main()
         {
+           
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainScreenLogin());
+            //Application.Run(new MainScreenLogin());
+            Application.Run(new ModePicker());
         }
 
 

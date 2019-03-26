@@ -46,6 +46,17 @@ namespace ATMProject
         }
         private void withdrawButtonOperation(int amount)
         {
+            if (Program.threadDelay == false)
+            {
+                Program.threadDelay = true;
+                Program.mre.WaitOne();
+            }
+            if (Program.threadDelay == true)
+            {
+                Program.threadDelay = false;
+                Program.mre.Set();
+
+            }
             Account tempAccount = currentAccount;
             bool success = tempAccount.decrementBalance(amount);
             withdrawValidation(success);
@@ -122,6 +133,11 @@ namespace ATMProject
             btn500.Visible = false;
             customBtn.Visible = false;
             btnBack.Visible = false;
+        }
+
+        private void MainScreenATM_Load(object sender, EventArgs e)
+        {
+
         }
     }
     //via https://stackoverflow.com/questions/5427020/prompt-dialog-in-windows-forms

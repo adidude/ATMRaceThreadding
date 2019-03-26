@@ -34,6 +34,10 @@ namespace ATMProject
             }
         }
 
+        private void MainScreenLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

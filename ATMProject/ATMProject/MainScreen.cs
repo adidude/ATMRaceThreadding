@@ -171,6 +171,43 @@ namespace ATMProject
         {
             MessageBox.Show("Your balance is £" + thisProgram.GetATM().getActiveAccount().getBalance(), "Account Balance");
         }
+
+        private void btn10_2_Click(object sender, EventArgs e)
+        {
+            Account tempAccount = thisProgram.GetATM().getActiveAccount();
+            tempAccount.decrementBalance(10);
+        }
+
+        private void btn20_2_Click(object sender, EventArgs e)
+        {
+            Account tempAccount = thisProgram.GetATM().getActiveAccount();
+            tempAccount.decrementBalance(20);
+        }
+
+        private void btn40_2_Click(object sender, EventArgs e)
+        {
+            Account tempAccount = thisProgram.GetATM().getActiveAccount();
+            tempAccount.decrementBalance(40);
+        }
+
+        private void btn100_2_Click(object sender, EventArgs e)
+        {
+            Account tempAccount = thisProgram.GetATM().getActiveAccount();
+            tempAccount.decrementBalance(100);
+        }
+
+        private void btn500_2_Click(object sender, EventArgs e)
+        {
+            Account tempAccount = thisProgram.GetATM().getActiveAccount();
+            tempAccount.decrementBalance(500);
+        }
+
+        private void accountBalanceBtn2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your balance is £" + thisProgram.GetATM().getActiveAccount().getBalance(), "Account Balance");
+        }
+
+        
     }
         
 

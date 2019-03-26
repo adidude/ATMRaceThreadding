@@ -157,6 +157,7 @@
             this.accountBalanceBtn2.TabIndex = 25;
             this.accountBalanceBtn2.Text = "Check Account Balance ATM";
             this.accountBalanceBtn2.UseVisualStyleBackColor = true;
+            this.accountBalanceBtn2.Click += new System.EventHandler(this.accountBalanceBtn2_Click);
             // 
             // withdrawATMBtn2
             // 
@@ -244,6 +245,7 @@
             this.btn500_2.TabIndex = 37;
             this.btn500_2.Text = "£500";
             this.btn500_2.UseVisualStyleBackColor = true;
+            this.btn500_2.Click += new System.EventHandler(this.btn500_2_Click);
             // 
             // btn100_2
             // 
@@ -253,6 +255,7 @@
             this.btn100_2.TabIndex = 36;
             this.btn100_2.Text = "£100";
             this.btn100_2.UseVisualStyleBackColor = true;
+            this.btn100_2.Click += new System.EventHandler(this.btn100_2_Click);
             // 
             // btn40_2
             // 
@@ -262,6 +265,7 @@
             this.btn40_2.TabIndex = 35;
             this.btn40_2.Text = "£40";
             this.btn40_2.UseVisualStyleBackColor = true;
+            this.btn40_2.Click += new System.EventHandler(this.btn40_2_Click);
             // 
             // btn20_2
             // 
@@ -271,6 +275,7 @@
             this.btn20_2.TabIndex = 34;
             this.btn20_2.Text = "£20";
             this.btn20_2.UseVisualStyleBackColor = true;
+            this.btn20_2.Click += new System.EventHandler(this.btn20_2_Click);
             // 
             // btn10_2
             // 
@@ -280,6 +285,7 @@
             this.btn10_2.TabIndex = 33;
             this.btn10_2.Text = "£10";
             this.btn10_2.UseVisualStyleBackColor = true;
+            this.btn10_2.Click += new System.EventHandler(this.btn10_2_Click);
             // 
             // btnBack
             // 

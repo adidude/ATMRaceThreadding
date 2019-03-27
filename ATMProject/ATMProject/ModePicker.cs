@@ -42,6 +42,7 @@ namespace ATMProject
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Program.raceCond = false;
             string message = "This Method Uses A Semaphore";
             string info = "Information";
             MessageBoxButtons buttons = MessageBoxButtons.OK;
@@ -51,6 +52,7 @@ namespace ATMProject
             {
                 //close the form and open the race condition windows
                 this.Close();
+                Program.startThreading();
             }
         }
     }

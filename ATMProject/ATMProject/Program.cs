@@ -15,6 +15,7 @@ namespace ATMProject
         public static bool threadDelay = false;
         public static bool raceCond = false;
         public static ManualResetEvent mre = new ManualResetEvent(false);
+        public static Semaphore semaphore = new Semaphore(1, 1);
         public Program()
         {
             ac[0] = new Account(300, 1111, 111111);

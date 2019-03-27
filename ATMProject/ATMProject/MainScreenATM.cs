@@ -46,7 +46,7 @@ namespace ATMProject //IMPORTANT: this is only for race condition
         }
         private void withdrawButtonOperation(int amount)
         {
-            if (Program.RaceCond == true)
+            if (Program.raceCond == true)
             { 
                 if (Program.threadDelay == false)
                 {
@@ -60,9 +60,17 @@ namespace ATMProject //IMPORTANT: this is only for race condition
 
                 }
             }   
+            if (Program.raceCond == false)
+            {
+                Program.semaphore.WaitOne();
+            }
             Account tempAccount = currentAccount;
             bool success = tempAccount.decrementBalance(amount);
             withdrawValidation(success);
+            if (Program.raceCond == false)
+            {
+                Program.semaphore.Release();
+            }
         }
         private void withdrawValidation(bool success)
         {

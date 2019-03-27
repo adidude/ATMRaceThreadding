@@ -16,7 +16,7 @@ namespace ATMProject
         Image atm = Resources.ATM;
         Image insert = Resources.insert;
 
-        Program thisProgram = new Program();
+        Program thisProgram = ModePicker.thisProgram;
         private static System.Timers.Timer timer = new System.Timers.Timer();
         public MainScreenLogin()
         {
@@ -40,7 +40,6 @@ namespace ATMProject
                 if (thisProgram.isLoginSuccessful(Int32.Parse(accountNumberTxtbox.Text), Int32.Parse(pinNumberTxtbox.Text)) && thisProgram.GetATM().getActiveAccount().getBlocked() != true)
                 {
                     thisProgram.GetATM().getActiveAccount().setAttemptsLeft(3);
-                    new MainScreenATM(thisProgram.GetATM().getActiveAccount()).Show();
                     new MainScreenATM(thisProgram.GetATM().getActiveAccount()).Show();
                     this.Hide();
                 }

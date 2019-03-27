@@ -173,6 +173,7 @@
             this.gifRenderer.TabIndex = 70;
             this.gifRenderer.TabStop = false;
             this.gifRenderer.Visible = false;
+            this.gifRenderer.Click += new System.EventHandler(this.gifRenderer_Click);
             // 
             // withdrawLbl
             // 

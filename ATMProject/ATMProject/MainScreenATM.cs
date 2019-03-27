@@ -181,9 +181,15 @@ namespace ATMProject
         private void customBtn_Click(object sender, EventArgs e)
         {
             Prompt thisPrompt = new Prompt();
-            int amount = Int32.Parse(thisPrompt.ShowDialog("How much?", "Custom Amount"));
-            withdrawButtonOperation(amount);
-            
+            try
+            {
+                int amount = Int32.Parse(thisPrompt.ShowDialog("How much?", "Custom Amount"));
+                withdrawButtonOperation(amount);
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("Please enter an integer", "Incorrect Input!");
+            }  
         }
 
         private void btnBack_Click(object sender, EventArgs e)

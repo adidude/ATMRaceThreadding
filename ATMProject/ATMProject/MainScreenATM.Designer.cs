@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreenATM));
             this.mainLbl = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.customBtn = new System.Windows.Forms.Button();
@@ -39,6 +40,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.accountBalanceBtn = new System.Windows.Forms.Button();
             this.withdrawATMBtn = new System.Windows.Forms.Button();
+            this.gifRenderer = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gifRenderer)).BeginInit();
             this.SuspendLayout();
             // 
             // mainLbl
@@ -151,11 +154,22 @@
             this.withdrawATMBtn.UseVisualStyleBackColor = true;
             this.withdrawATMBtn.Click += new System.EventHandler(this.withdrawATMBtn_Click);
             // 
+            // gifRenderer
+            // 
+            this.gifRenderer.Image = ((System.Drawing.Image)(resources.GetObject("gifRenderer.Image")));
+            this.gifRenderer.Location = new System.Drawing.Point(1, 1);
+            this.gifRenderer.Name = "gifRenderer";
+            this.gifRenderer.Size = new System.Drawing.Size(799, 450);
+            this.gifRenderer.TabIndex = 70;
+            this.gifRenderer.TabStop = false;
+            this.gifRenderer.Visible = false;
+            // 
             // MainScreenATM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.gifRenderer);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.customBtn);
             this.Controls.Add(this.btn500);
@@ -169,6 +183,7 @@
             this.Controls.Add(this.mainLbl);
             this.Name = "MainScreenATM";
             this.Text = "MainScreenATM";
+            ((System.ComponentModel.ISupportInitialize)(this.gifRenderer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +201,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button accountBalanceBtn;
         private System.Windows.Forms.Button withdrawATMBtn;
+        private System.Windows.Forms.PictureBox gifRenderer;
     }
 }

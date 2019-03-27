@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+//TODO: Check if necessary
 using System.Timers;
 using System.Windows.Forms;
 
@@ -14,14 +15,14 @@ namespace ATMProject
 {
     public partial class MainScreen : Form
     {
-
+        //TODO: Check if necessary
         private static System.Timers.Timer timer = new System.Timers.Timer();
 
         Program thisProgram = new Program();
         public MainScreen()
         {
             InitializeComponent();
-
+            //Hides all elements of the form.
             withdrawATMBtn.Visible = false;
             withdrawATMBtn2.Visible = false;
             accountBalanceBtn.Visible = false;
@@ -50,23 +51,26 @@ namespace ATMProject
             submitBtn.Visible = false;
             gifRenderer.Visible = false;
         }
+
+        /**
+         * Will check if the account and pin are correct.
+         **/
         private void submitBtn_Click(object sender, EventArgs e)
         {
             try
             {
+                //If the login is successful.
                 if (thisProgram.isLoginSuccessful(Int32.Parse(accountNumberTxtbox.Text), Int32.Parse(pinNumberTxtbox.Text)))
                 {
-                    //TODO:Implement Success Condition
                     updateForm();
                 }
                 else
                 {
-                    //TODO:Implement Failure Condition
                     MessageBox.Show("Please enter the correct account number or PIN", "Login Failed!", MessageBoxButtons.OK);
 
                 }
             }
-            catch(System.FormatException o)
+            catch (System.FormatException o)
             {
                 MessageBox.Show("Please enter the correct account number or PIN", "Login Failed!", MessageBoxButtons.OK);
             }
@@ -230,11 +234,11 @@ namespace ATMProject
         {
             InsertCardBtn.Visible = false;
             gifRenderer.Visible = true;
-            SetTimer(1960);
-            while(gifRenderer.Visible)
+            //SetTimer(1960);
+            while (gifRenderer.Visible)
             {
                 gifRenderer.Refresh();
-                if(!timer.Enabled)
+                if (!timer.Enabled)
                 {
                     accountNumberLbl.Visible = true;
                     accountNumberTxtbox.Visible = true;
@@ -264,13 +268,22 @@ namespace ATMProject
             timer.Enabled = false;
         }
 
-        private void gifRenderer_Click(object sender, EventArgs e)
+        //resizes an image
+        public static Bitmap ResizeImage(Image image, int X,int y)
         {
+            var destRect = new Rectangle(0, 0, x, siyze); var destImage = new Bitmap(x, y); destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
 
+            using (var graphics = Graphics.FromImage(destImage))
+            {
+                graphics.CompositingMode = CompositingMode.SourceCopy; graphics.CompositingQuality = CompositingQuality.HighQuality; graphics.InterpolationMode = InterpolationMode.HighQualityBicubic; graphics.SmoothingMode = SmoothingMode.HighQuality; graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY); graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
+            }
+
+            return destImage;
         }
     }
-        
-
-        
-    }
-
+}

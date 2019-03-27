@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATMProject.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace ATMProject
 {
     public partial class MainScreenATM : Form
     {
+        Image empty = Resources.emptywallet;
+        Image withdraw = Resources.withdrawMoney;
+
         Account currentAccount;
         public MainScreenATM(Account current)
         {
@@ -52,14 +56,48 @@ namespace ATMProject
         }
         private void withdrawValidation(bool success)
         {
+            GifTimer timer = new GifTimer();
+
+            mainLbl.Visible = false;
+            btn10.Visible = false;
+            btn20.Visible = false;
+            btn40.Visible = false;
+            btn100.Visible = false;
+            btn500.Visible = false;
+            customBtn.Visible = false;
+            btnBack.Visible = false;
+
             if (success)
             {
                 MessageBox.Show("You successfully withdrew money from the ATM", "Success");
+                gifRenderer.Image = withdraw;
+                timer.setTimer(3900);
             }
             else
             {
                 MessageBox.Show("Withdraw not successful, there is not enough money in your account", "Failure");
+                gifRenderer.Image = empty;
+                timer.setTimer(4070);
             }
+
+            gifRenderer.Visible = true;
+            while (gifRenderer.Visible)
+            {
+                gifRenderer.Refresh();
+                if (!timer.getClock().Enabled)
+                {
+                    gifRenderer.Visible = false;
+                    mainLbl.Visible = true;
+                    btn10.Visible = true;
+                    btn20.Visible = true;
+                    btn40.Visible = true;
+                    btn100.Visible = true;
+                    btn500.Visible = true;
+                    customBtn.Visible = true;
+                    btnBack.Visible = true;
+                }
+            }
+
         }
         private void accountBalanceBtn_Click(object sender, EventArgs e)
         {

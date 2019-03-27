@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Timers;
 
 namespace ATMProject
 {
@@ -57,5 +58,33 @@ namespace ATMProject
         }
 
 
+    }
+
+    /**
+     * Is a timer for carrying out events after an interval.
+     **/
+    public class GifTimer
+    {
+        private static System.Timers.Timer clock = new System.Timers.Timer();
+
+        public void setTimer(int time)
+        {
+            clock.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+
+            clock.Interval = time;
+
+            clock.Enabled = true;
+
+        }
+
+        public void OnTimedEvent(Object source, ElapsedEventArgs e)
+        {
+            clock.Enabled = false;
+        }
+
+        public System.Timers.Timer getClock()
+        {
+            return clock;
+        }
     }
 }

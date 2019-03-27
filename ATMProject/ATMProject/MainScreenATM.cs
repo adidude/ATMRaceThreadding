@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ATMProject
+namespace ATMProject //IMPORTANT: this is only for race condition
 {
     public partial class MainScreenATM : Form
     {
@@ -46,17 +46,20 @@ namespace ATMProject
         }
         private void withdrawButtonOperation(int amount)
         {
-            if (Program.threadDelay == false)
-            {
+            if (Program.RaceCond == true)
+            { 
+                if (Program.threadDelay == false)
+                {
                 Program.threadDelay = true;
                 Program.mre.WaitOne();
-            }
-            if (Program.threadDelay == true)
-            {
+                }
+                if (Program.threadDelay == true)
+                {
                 Program.threadDelay = false;
                 Program.mre.Set();
 
-            }
+                }
+            }   
             Account tempAccount = currentAccount;
             bool success = tempAccount.decrementBalance(amount);
             withdrawValidation(success);

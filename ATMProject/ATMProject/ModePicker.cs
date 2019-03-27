@@ -19,7 +19,8 @@ namespace ATMProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string message = "This Will Simulate A Race Condition";
+            Program.raceCond = true;
+            string message = "This Will Simulate A Race Condition. Go to withdraw from one ATM, the thread will lock until you withdraw from the second ATM. This is to allow for synronised withdrawals.";
             string info = "Information";
             MessageBoxButtons buttons = MessageBoxButtons.OK;
             DialogResult result;
@@ -41,7 +42,7 @@ namespace ATMProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string message = "***yet to be implemented";
+            string message = "This Method Uses A Semaphore";
             string info = "Information";
             MessageBoxButtons buttons = MessageBoxButtons.OK;
             DialogResult result;

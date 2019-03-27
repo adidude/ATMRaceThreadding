@@ -41,3 +41,4 @@ C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debu
 C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debug\ATMProject.csproj.CoreCompileInputs.cache
 C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debug\ATMProject.exe
 C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debug\ATMProject.pdb
+C:\Users\chris\Documents\GitHub\ATMRaceThreadding\ATMProject\ATMProject\obj\Debug\ATMProject.sMainFormATM.resources

@@ -13,6 +13,7 @@ namespace ATMProject
         private Account[] ac = new Account[3];
         private ATM atm;
         public static bool threadDelay = false;
+        public static bool raceCond = false;
         public static ManualResetEvent mre = new ManualResetEvent(false);
         public Program()
         {

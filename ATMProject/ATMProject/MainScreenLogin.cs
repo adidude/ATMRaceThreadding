@@ -12,17 +12,19 @@ namespace ATMProject
 {
     public partial class MainScreenLogin : Form
     {
-        Program thisProgram = new Program();
+        //Program thisProgram = new Program();
+        
         public MainScreenLogin()
         {
+            //Program thisProgram = ModePicker.thisProgram;
             InitializeComponent();
         }
         private void submitBtn_Click(object sender, EventArgs e)
         {
-            if (thisProgram.isLoginSuccessful(Int32.Parse(accountNumberTxtbox.Text), Int32.Parse(pinNumberTxtbox.Text)))
+            if (ModePicker.thisProgram.isLoginSuccessful(Int32.Parse(accountNumberTxtbox.Text), Int32.Parse(pinNumberTxtbox.Text)))
             {
                 //TODO:Implement Success Condition
-                new MainScreenATM(thisProgram.GetATM().getActiveAccount()).Show();
+                new MainScreenATM(ModePicker.thisProgram.GetATM().getActiveAccount()).Show();
                 this.Hide();
             }
             else

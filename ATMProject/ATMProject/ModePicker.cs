@@ -12,9 +12,13 @@ namespace ATMProject
 {
     public partial class ModePicker : Form
     {
+        public static Program thisProgram = new Program();
+
         public ModePicker()
         {
             InitializeComponent();
+            
+            //Program thisProgram = new Program();
         }
 
         private void button1_Click(object sender, EventArgs e)

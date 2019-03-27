@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,11 +47,12 @@ namespace ATMProject //IMPORTANT: this is only for race condition
         }
         private void withdrawButtonOperation(int amount)
         {
-            if (Program.raceCond == true)
+            /*if (Program.raceCond == true)
             { 
                 if (Program.threadDelay == false)
                 {
                 Program.threadDelay = true;
+                    //Thread.Sleep(5000);
                 Program.mre.WaitOne();
                 }
                 if (Program.threadDelay == true)
@@ -59,13 +61,32 @@ namespace ATMProject //IMPORTANT: this is only for race condition
                 Program.mre.Set();
 
                 }
-            }   
+            } */  
             if (Program.raceCond == false)
             {
                 Program.semaphore.WaitOne();
             }
             Account tempAccount = currentAccount;
-            bool success = tempAccount.decrementBalance(amount);
+            int tempBalance;
+            tempBalance = tempAccount.getBalance();
+            tempBalance = tempBalance - amount;
+            if (Program.raceCond == true)
+            {
+                if (Program.threadDelay == false)
+                {
+                    Program.threadDelay = true;
+                    //Thread.Sleep(5000);
+                    Program.mre.WaitOne();
+                }
+                if (Program.threadDelay == true)
+                {
+                    Program.threadDelay = false;
+                    Program.mre.Set();
+
+                }
+            }
+            tempAccount.setBalance(tempBalance);
+            bool success = true;
             withdrawValidation(success);
             if (Program.raceCond == false)
             {

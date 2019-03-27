@@ -63,9 +63,29 @@ namespace ATMProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap emptywallet {
+        internal static System.Drawing.Bitmap ATM {
             get {
-                object obj = ResourceManager.GetObject("emptywallet", resourceCulture);
+                object obj = ResourceManager.GetObject("ATM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emptyWallet {
+            get {
+                object obj = ResourceManager.GetObject("emptyWallet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap insert {
+            get {
+                object obj = ResourceManager.GetObject("insert", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

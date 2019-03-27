@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ATMProject.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace ATMProject
 {
     public partial class MainScreenLogin : Form
     {
+        Image atm = Resources.ATM;
+        Image insert = Resources.insert;
+
         Program thisProgram = new Program();
         private static System.Timers.Timer timer = new System.Timers.Timer();
         public MainScreenLogin()
@@ -24,7 +28,8 @@ namespace ATMProject
             pinNumberLbl.Visible = false;
             mainLbl.Visible = false;
             submitBtn.Visible = false;
-            gifRenderer.Visible = false;
+            submitLbl.Visible = false;
+            gifRenderer.Visible = true;
         }
         private void submitBtn_Click(object sender, EventArgs e)
         {
@@ -34,7 +39,6 @@ namespace ATMProject
                 //Account current = thisProgram.GetATM().getActiveAccount();
                 if (thisProgram.isLoginSuccessful(Int32.Parse(accountNumberTxtbox.Text), Int32.Parse(pinNumberTxtbox.Text)) && thisProgram.GetATM().getActiveAccount().getBlocked() != true)
                 {
-                    //TODO:Implement Success Condition
                     thisProgram.GetATM().getActiveAccount().setAttemptsLeft(3);
                     new MainScreenATM(thisProgram.GetATM().getActiveAccount()).Show();
                     new MainScreenATM(thisProgram.GetATM().getActiveAccount()).Show();
@@ -42,7 +46,6 @@ namespace ATMProject
                 }
                 else
                 {
-                    //TODO:Implement Failure Condition
                     thisProgram.GetATM().getActiveAccount().setAttemptsLeft(thisProgram.GetATM().getActiveAccount().getAttemptsLeft() - 1);
                     if (thisProgram.GetATM().getActiveAccount().getAttemptsLeft() == 0)
                     {
@@ -69,8 +72,8 @@ namespace ATMProject
         private void InsertCardBtn_Click(object sender, EventArgs e)
         {
             InsertCardBtn.Visible = false;
-            gifRenderer.Visible = true;
-            GifTimer timer = new GifTimer(); 
+            gifRenderer.Image = insert;
+            GifTimer timer = new GifTimer();
             timer.setTimer(1960);
             while (gifRenderer.Visible)
             {
@@ -81,15 +84,15 @@ namespace ATMProject
                     accountNumberTxtbox.Visible = true;
                     pinNumberTxtbox.Visible = true;
                     pinNumberLbl.Visible = true;
+                    submitLbl.Visible = true;
                     mainLbl.Visible = true;
                     submitBtn.Visible = true;
                     gifRenderer.Visible = false;
+                    gifRenderer.Image = atm;
                 }
             }
+            gifRenderer.Visible = true;
         }
-        
-
-        
     }
 }
 

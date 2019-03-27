@@ -13,7 +13,7 @@ namespace ATMProject
 {
     public partial class MainScreenATM : Form
     {
-        Image empty = Resources.emptywallet;
+        Image empty = Resources.emptyWallet;
         Image withdraw = Resources.withdrawMoney;
 
         Account currentAccount;
@@ -30,6 +30,15 @@ namespace ATMProject
             btn500.Visible = false;
             customBtn.Visible = false;
             btnBack.Visible = false;
+            Lbl10Pnd.Visible = false;
+            Lbl20Pnd.Visible = false;
+            Lbl40Pnd.Visible = false;
+            BackLbl.Visible = false;
+            Lbl100Pnd.Visible = false;
+            Lbl500Pnd.Visible = false;
+            CustomLbl.Visible = false; 
+
+            gifRenderer.Visible = true;
         }
 
 
@@ -43,9 +52,20 @@ namespace ATMProject
             btn500.Visible = true;
             customBtn.Visible = true;
             btnBack.Visible = true;
+            Lbl10Pnd.Visible = true;
+            Lbl20Pnd.Visible = true;
+            Lbl40Pnd.Visible = true;
+            BackLbl.Visible = true;
+            Lbl100Pnd.Visible = true;
+            Lbl500Pnd.Visible = true;
+            CustomLbl.Visible = true;
 
             withdrawATMBtn.Visible = false;
             accountBalanceBtn.Visible = false;
+            ExitLbl.Visible = false;
+            withdrawLbl.Visible = false;
+            checkBalanceLbl.Visible = false;
+
             btnExit.Visible = false;
         }
         private void withdrawButtonOperation(int amount)
@@ -66,6 +86,14 @@ namespace ATMProject
             btn500.Visible = false;
             customBtn.Visible = false;
             btnBack.Visible = false;
+            Lbl10Pnd.Visible = false;
+            Lbl20Pnd.Visible = false;
+            Lbl40Pnd.Visible = false;
+            BackLbl.Visible = false;
+            Lbl100Pnd.Visible = false;
+            Lbl500Pnd.Visible = false;
+            CustomLbl.Visible = false;
+
 
             if (success)
             {
@@ -80,6 +108,9 @@ namespace ATMProject
                 timer.setTimer(4070);
             }
 
+            /*
+             * 
+             * **/
             gifRenderer.Visible = true;
             while (gifRenderer.Visible)
             {
@@ -87,6 +118,7 @@ namespace ATMProject
                 if (!timer.getClock().Enabled)
                 {
                     gifRenderer.Visible = false;
+                    gifRenderer.Image = Resources.ATM;
                     mainLbl.Visible = true;
                     btn10.Visible = true;
                     btn20.Visible = true;
@@ -95,9 +127,16 @@ namespace ATMProject
                     btn500.Visible = true;
                     customBtn.Visible = true;
                     btnBack.Visible = true;
+                    Lbl10Pnd.Visible = true;
+                    Lbl20Pnd.Visible = true;
+                    Lbl40Pnd.Visible = true;
+                    BackLbl.Visible = true;
+                    Lbl100Pnd.Visible = true;
+                    Lbl500Pnd.Visible = true;
+                    CustomLbl.Visible = true;
                 }
             }
-
+            gifRenderer.Visible = true;
         }
         private void accountBalanceBtn_Click(object sender, EventArgs e)
         {
@@ -152,6 +191,9 @@ namespace ATMProject
             withdrawATMBtn.Visible = true;
             accountBalanceBtn.Visible = true;
             btnExit.Visible = true;
+            withdrawLbl.Visible = true;
+            ExitLbl.Visible = true;
+            checkBalanceLbl.Visible = true;
 
             btn10.Visible = false;
             btn20.Visible = false;
@@ -160,6 +202,14 @@ namespace ATMProject
             btn500.Visible = false;
             customBtn.Visible = false;
             btnBack.Visible = false;
+            Lbl10Pnd.Visible = false;
+            Lbl20Pnd.Visible = false;
+            Lbl40Pnd.Visible = false;
+            BackLbl.Visible = false;
+            Lbl100Pnd.Visible = false;
+            Lbl500Pnd.Visible = false;
+            CustomLbl.Visible = false;
+
         }
     }
     //Prompt via https://stackoverflow.com/questions/5427020/prompt-dialog-in-windows-forms
